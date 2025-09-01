@@ -1,11 +1,8 @@
 # Xget
 
-**[English](README.en.md)**
-
 [![Chromium 扩展](https://img.shields.io/badge/Chromium%20扩展-4285F4?logo=googlechrome&logoColor=white)](#-生态系统集成)
 [![Firefox 扩展](https://img.shields.io/badge/Firefox%20扩展-582ACB?logo=Firefox&logoColor=white)](#-生态系统集成)
-[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Workers-F38020?&logo=cloudflare&logoColor=white)](#cloudflare-workers)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](#vercel)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Workers-F38020?&logo=cloudflare&logoColor=white)](#cloudflare-workers强烈推荐)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?&logo=docker&logoColor=white)](#docker)
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?&logo=github&logoColor=white)](#github)
@@ -42,13 +39,22 @@
 [![AI 推理提供商](https://img.shields.io/badge/AI%20推理提供商-412991?logo=openai&logoColor=white)](#ai-推理提供商)
 [![容器注册表](https://img.shields.io/badge/容器注册表-%23007EC6.svg?logo=docker&logoColor=white)](#容器注册表)
 
-超高性能、安全的一站式开源资源获取加速引擎。其性能远超传统加速器，为您提供跨多个平台的统一高效的加速体验，涵盖代码储存库、包管理、AI 推理 API、容器镜像、模型及数据集等。
+超高性能、安全的一站式开源资源访问加速引擎。其性能远超传统加速器，为您提供跨多个平台的统一高效的加速体验，涵盖代码储存库、包管理、AI 推理 API、容器镜像、模型及数据集等。
+
+## 💡 存储库初衷
+
+本存储库的初衷是为了加速在中国大陆境内访问不违反相关法律法规的平台上的开源资源，从而为广大开发者提供一个稳定、合法的加速体验。我们致力于：
+
+- **🌍 消除地理限制**：帮助中国大陆开发者快速访问海外开源资源
+- **⚖️ 合规合法**：严格遵守相关法律法规，仅加速合法的公开资源
+- **🚀 提升效率**：显著提高开发者的工作效率和开发体验
+- **🆓 普惠开源**：为开源社区贡献力量，促进技术交流与发展
 
 ## 🎯 快速使用
 
-**公共实例：`xget.xi-xu.me`** - 开箱即用，无需部署！
+**预部署实例（不保证可靠性）：`xget.xi-xu.me`** - 开箱即用，无需部署！
 
-**URL 转换器：**[**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - 一键转换任意支持平台的 URL 为 Xget 加速格式！
+**URL 转换器：**[**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - 一键转换任意支持平台的 URL 为 Xget 的加速格式！
 
 > **⚡ 立即体验极速下载**：无需注册，无需配置，直接使用即可感受飞一般的下载速度！
 
@@ -67,7 +73,7 @@
 
 - **一站式多平台支持**：统一支持代码存储库、包管理器、AI 推理提供商、容器注册表、模型与数据集托管平台
 - **智能识别与转换**：自动识别平台前缀并转换为目标平台的正确 URL 结构
-- **一致的加速体验**：无论文件类型或来源，均可享受统一且稳定的极速下载服务
+- **一致的加速体验**：无论文件类型或来源，均可享受统一且稳定的极速下载体验
 
 ### 🔒 企业级安全保障
 
@@ -126,7 +132,7 @@
 
 ## 📖 URL 转换规则
 
-使用公共实例 **`xget.xi-xu.me`** 或你自己部署的实例，只需简单替换域名并添加平台前缀：
+使用预部署实例 **`xget.xi-xu.me`** 或你自己部署的实例，只需简单替换域名并添加平台前缀：
 
 ### 转换格式
 
@@ -707,8 +713,6 @@ https://xget.xi-xu.me/cr/gcr/v2/distroless/base/manifests/latest
 
 ### Git 操作与配置
 
-Xget 完全兼容 Git 协议，支持所有标准 Git 操作，并提供全局加速配置：
-
 #### Git 操作
 
 ```bash
@@ -760,7 +764,7 @@ git config --global url."https://xget.xi-xu.me/aosp/".insteadOf "https://android
 # 验证配置
 git config --global --get-regexp url
 
-# 现在所有相关平台的 git clone 都会自动使用 Xget 加速
+# 现在所有相关平台的 git clone 都会自动使用 Xget
 git clone https://github.com/microsoft/vscode.git  # 自动转换为 Xget URL
 git clone https://gitlab.com/gitlab-org/gitlab.git  # 自动转换为 Xget URL
 git clone https://codeberg.org/forgejo/forgejo.git  # 自动转换为 Xget URL
@@ -841,7 +845,7 @@ print("模型和分词器加载成功！")
 ```python
 import requests
 
-# 设置 API 基础 URL 使用 Xget 加速
+# 设置 API 基础 URL 使用 Xget
 base_url = "https://xget.xi-xu.me/civitai"
 
 # 获取模型信息
@@ -1489,7 +1493,7 @@ reqwest = "0.11"
 ```
 
 ```bash
-# 构建项目时会自动使用 Xget 加速
+# 构建项目时会自动使用 Xget
 cargo build
 
 # 更新依赖
@@ -1644,8 +1648,6 @@ download_arxiv_paper("2301.07041", "attention_is_all_you_need.pdf")
 
 ### F-Droid 存储库镜像
 
-F-Droid 是 Android 平台上最大的开源应用商店，Xget 为 F-Droid 存储库提供高速镜像服务，显著提升应用下载和更新速度。
-
 #### 配置 F-Droid 客户端使用 Xget 镜像
 
 1. 在 F-Droid 应用中进入**设置** → **存储库**
@@ -1737,17 +1739,15 @@ task checkFDroidAvailability {
 
 ### AI 推理 API 加速
 
-Xget 为众多 AI 推理 API 提供加速服务，通过智能路由优化，显著提升 API 响应速度和可靠性。
-
 #### OpenAI API
 
 ```python
 import openai
 
-# 使用 Xget 加速的 OpenAI API
+# 使用 Xget 的 OpenAI API
 client = openai.OpenAI(
     api_key="your-api-key",
-    base_url="https://xget.xi-xu.me/ip/openai/v1"  # 使用 Xget 加速
+    base_url="https://xget.xi-xu.me/ip/openai/v1"  # 使用 Xget
 )
 
 # 聊天完成
@@ -1766,10 +1766,10 @@ print(response.choices[0].message.content)
 ```python
 import anthropic
 
-# 使用 Xget 加速的 Anthropic API
+# 使用 Xget 的 Anthropic API
 client = anthropic.Anthropic(
     api_key="your-api-key",
-    base_url="https://xget.xi-xu.me/ip/anthropic"  # 使用 Xget 加速
+    base_url="https://xget.xi-xu.me/ip/anthropic"  # 使用 Xget
 )
 
 # 创建消息
@@ -1792,7 +1792,7 @@ import google.generativeai as genai
 # 配置 API 密钥
 genai.configure(api_key="your-api-key")
 
-# 使用自定义传输配置 Xget 加速
+# 使用自定义传输配置 Xget
 import requests
 
 class XgetTransport:
@@ -1800,7 +1800,7 @@ class XgetTransport:
         self.base_url = base_url
 
     def request(self, method, url, **kwargs):
-        # 将请求转发到 Xget 加速服务
+        # 将请求转发到 Xget
         accelerated_url = url.replace("https://generativelanguage.googleapis.com",
                                     "https://xget.xi-xu.me/ip/gemini")
         return requests.request(method, accelerated_url, **kwargs)
@@ -1828,7 +1828,7 @@ def call_ai_api(provider, endpoint, data, api_key):
         "Content-Type": "application/json"
     }
 
-    # 使用 Xget 加速 URL
+    # 使用 Xget 的加速 URL
     url = f"https://xget.xi-xu.me/ip/{provider}/{endpoint}"
 
     response = requests.post(url, headers=headers, json=data)
@@ -1883,7 +1883,7 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: 'your-api-key',
-  baseURL: 'https://xget.xi-xu.me/ip/openai',  // 使用 Xget 加速
+  baseURL: 'https://xget.xi-xu.me/ip/openai',  // 使用 Xget
 });
 
 async function chatWithGPT() {
@@ -1900,7 +1900,7 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const anthropic = new Anthropic({
   apiKey: 'your-api-key',
-  baseURL: 'https://xget.xi-xu.me/ip/anthropic',  // 使用 Xget 加速
+  baseURL: 'https://xget.xi-xu.me/ip/anthropic',  // 使用 Xget
 });
 
 async function chatWithClaude() {
@@ -1935,13 +1935,11 @@ from openai import OpenAI
 # 从环境变量读取配置
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
-    base_url=os.getenv("OPENAI_BASE_URL")  # 自动使用 Xget 加速
+    base_url=os.getenv("OPENAI_BASE_URL")  # 自动使用 Xget
 )
 ```
 
 ### 容器镜像加速
-
-Xget 为容器镜像拉取提供全面的加速支持，兼容 Docker、Podman、containerd 等容器运行时。
 
 #### Docker 配置
 
@@ -1978,7 +1976,7 @@ docker pull xget.xi-xu.me/cr/mcr/dotnet/runtime:8.0
 #### Kubernetes 部署配置
 
 ```yaml
-# deployment.yaml - 使用 Xget 加速的镜像
+# deployment.yaml - 使用 Xget 的镜像
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2073,7 +2071,7 @@ jobs:
 
       - name: Build with accelerated base images
         run: |
-          # 构建时使用 Xget 加速的基础镜像
+          # 构建时使用 Xget 的基础镜像
           docker build -t myapp:latest \
             --build-arg BASE_IMAGE=xget.xi-xu.me/cr/ghcr/nodejs/node:18-alpine .
 
@@ -2102,7 +2100,7 @@ podman pull xget.xi-xu.me/cr/ghcr/nginxinc/nginx-unprivileged:latest
 #### containerd 配置
 
 ```toml
-# 配置 containerd 使用 Xget 加速
+# 配置 containerd 使用 Xget
 # 编辑 /etc/containerd/config.toml
 [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
   [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
@@ -2116,106 +2114,27 @@ podman pull xget.xi-xu.me/cr/ghcr/nginxinc/nginx-unprivileged:latest
 sudo systemctl restart containerd
 ```
 
-### CI/CD 环境集成
-
-#### GitHub Actions
-
-```yaml
-name: Download Dependencies
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download model files
-        run: |
-          # 使用 Xget 加速下载大型模型文件
-          wget https://xget.xi-xu.me/hf/microsoft/DialoGPT-medium/resolve/main/pytorch_model.bin
-
-      - name: Clone dependency repo
-        run: |
-          # 使用 Xget 加速 Git 克隆
-          git clone https://xget.xi-xu.me/gh/[所有者]/[存储库].git
-
-      - name: Download release assets
-        run: |
-          # 批量下载发布文件
-          curl -L -O https://xget.xi-xu.me/gh/[所有者]/[存储库]/releases/download/v1.0.0/[文件名].tar.gz
-          curl -L -O https://xget.xi-xu.me/gh/[所有者]/[存储库]/releases/download/v1.0.0/[文件名].zip
-```
-
-#### GitLab CI
-
-```yaml
-stages:
-  - download
-  - build
-
-download_dependencies:
-  stage: download
-  script:
-    # 使用 Xget 加速下载
-    - wget https://xget.xi-xu.me/gl/gitlab-org/gitlab-runner/-/archive/main/gitlab-runner-main.zip
-    - git clone https://xget.xi-xu.me/gh/[所有者]/[依赖存储库].git
-    # 下载 Hugging Face 数据集
-    - curl -L -O https://xget.xi-xu.me/hf/datasets/wikitext/resolve/main/wikitext-103-v1/wiki.train.tokens
-  artifacts:
-    paths:
-      - "*.zip"
-      - "*.json"
-      - dependency/
-```
-
-#### Docker 构建优化
-
-```dockerfile
-FROM ubuntu:22.04
-
-# 在 Docker 构建中使用 Xget 加速下载
-RUN apt-get update && apt-get install -y wget curl git
-
-# 下载大型文件
-RUN wget https://xget.xi-xu.me/gh/microsoft/vscode/archive/refs/heads/main.zip
-
-# 克隆源码
-RUN git clone https://xget.xi-xu.me/gh/[所有者]/[源码存储库].git /app
-
-# 下载模型文件
-RUN curl -L -O /models/model.bin https://xget.xi-xu.me/hf/microsoft/DialoGPT-medium/resolve/main/pytorch_model.bin
-
-# 配置并安装 conda 包
-RUN echo "default_channels:" > ~/.condarc && \
-    echo "  - https://xget.xi-xu.me/conda/pkgs/main" >> ~/.condarc && \
-    echo "  - https://xget.xi-xu.me/conda/pkgs/r" >> ~/.condarc && \
-    echo "  - https://xget.xi-xu.me/conda/pkgs/msys2" >> ~/.condarc && \
-    echo "channel_alias: https://xget.xi-xu.me/conda/community" >> ~/.condarc && \
-    echo "channel_priority: strict" >> ~/.condarc && \
-    conda install -y numpy pandas matplotlib
-
-WORKDIR /app
-```
-
 ## 🚀 部署选择
 
-### Cloudflare Workers
+### Cloudflare Workers（强烈推荐）
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/xixu-me/Xget)
 
+**强烈建议使用 Cloudflare Workers 的方式进行部署**，这种方式具有以下优势：
+
+- **💰 成本优势**：除了注册域名的费用外，在大多数情况下是免费的
+- **🚀 性能最高**：全球边缘节点，响应速度最快
+- **🔧 维护简单**：无需服务器管理，自动扩展和更新
+
 部署后，你的 Xget 服务将在 `your-worker-name.your-subdomain.workers.dev` 上可用。
 
-### Vercel
+### 其他部署方式
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xixu-me/Xget)
+提供的其他部署方式主要是为了满足部分用户的多样化需求：
 
-部署后，你的 Xget 服务将在 `your-project-name.vercel.app` 上可用。
+#### Docker
 
-### Docker
-
-#### 使用预构建镜像（推荐）
+##### 使用预构建镜像
 
 ```bash
 # 拉取最新镜像
@@ -2229,7 +2148,7 @@ docker run -d \
   ghcr.io/xixu-me/xget:latest
 ```
 
-#### 本地构建镜像
+##### 本地构建镜像
 
 ```bash
 # 克隆存储库
@@ -2247,7 +2166,7 @@ docker run -d \
   xget
 ```
 
-#### Docker Compose
+##### Docker Compose
 
 创建 `docker-compose.yml` 文件：
 
@@ -2278,7 +2197,7 @@ services:
 docker-compose up -d
 ```
 
-#### Kubernetes 部署
+##### Kubernetes 部署
 
 创建 `k8s-deployment.yaml`：
 
@@ -2460,7 +2379,7 @@ A: 检查 URL 路径格式，确认平台前缀正确使用。
 
 ### 性能监控
 
-服务会在响应头中返回性能指标：
+在响应头中返回性能指标：
 
 - `X-Performance-Metrics`: 包含请求各阶段的耗时统计
 - `X-Cache-Status`: 显示缓存命中状态
@@ -2475,12 +2394,11 @@ npx wrangler dev --log-level debug
 
 ## ⚠️ 免责声明
 
-- **合法合规使用**：本存储库仅供加速合法的公开资源访问，包括但不限于文件下载、Git 操作、AI 推理 API 调用、容器镜像拉取、包管理器访问等。用户必须严格遵守所有相关平台的服务条款、使用协议以及所在地区的法律法规。禁止用于任何违法、侵权或恶意目的
-- **服务可用性声明**：公共实例 `xget.xi-xu.me` 作为免费开源服务提供，不提供服务等级协议（SLA）保证。我们尽力维护服务稳定，但不承诺 100% 可用性。生产环境或关键业务建议部署专属实例
+- **合法合规使用**：本存储库仅供加速合法的公开资源访问，包括但不限于文件下载、Git 操作、AI 推理 API 调用、容器镜像拉取、包管理器访问等。用户必须严格遵守所有相关平台的服务条款、使用协议以及所在地区的法律法规。禁止用于任何违法、侵权或恶意目的。任何超出合法公开资源范围的使用行为，均由用户自行承担相应的法律责任
 - **数据隐私保护**：Xget 采用无日志架构，不存储、记录或分析用户请求数据。但用户仍需谨慎处理敏感信息，避免通过公共网络传输机密内容
-- **责任范围限制**：使用本服务可能产生的任何直接损失、间接损失、数据丢失、业务中断或其他后果，存储库维护者和贡献者均不承担任何法律责任
-- **第三方平台尊重**：请严格遵守 GitHub、GitLab、Gitea、Codeberg、SourceForge、Hugging Face、Docker Hub、各大包管理平台等的服务条款、API 使用限制和速率控制。避免对源平台造成过度负载
-- **知识产权保护**：用户应确保下载的内容不侵犯任何第三方的知识产权。对于通过本服务获取的受版权保护的内容，请遵守相应的许可协议和使用条款
+- **责任范围限制**：使用本存储库可能产生的任何直接损失、间接损失、数据丢失、业务中断或其他后果，存储库维护者和贡献者均不承担任何法律责任
+- **第三方平台尊重**：请严格遵守 GitHub、GitLab、Gitea、Codeberg、SourceForge、Hugging Face、各大包管理平台和容器注册表等的服务条款、API 使用限制和速率控制。避免对源平台造成过度负载
+- **知识产权保护**：用户应确保下载的内容不侵犯任何第三方的知识产权。对于通过本存储库获取的受版权保护的内容，请遵守相应的许可协议和使用条款
 - **安全风险提醒**：虽然 Xget 实施了多项安全措施，但互联网传输存在固有风险。建议用户对下载的文件进行安全扫描，特别是可执行文件和脚本
 
 ## 🤝 贡献
