@@ -44,16 +44,9 @@
 [![AI Inference APIs](https://img.shields.io/badge/AI%20Inference%20APIs-412991?logo=openai&logoColor=white)](#ai-inference-api-acceleration)
 [![Container Registry](https://img.shields.io/badge/Container%20Registry-%23007EC6.svg?logo=docker&logoColor=white)](#container-image-acceleration)
 
-Ultra-high-performance, secure acceleration engine for developer resources. It far outperforms traditional accelerators and delivers a unified high-speed experience across code repositories, package registries, AI inference APIs, container images, models, and datasets.
+An ultra-high-performance, secure, all-in-one acceleration engine for developer resources whose performance far surpasses traditional accelerators, delivering a unified, efficient acceleration experience across multiple platforms, including code repositories, package management, AI inference APIs, container images, models and datasets, and more.
 
-## 💡 Project Mission
-
-This project accelerates access to open-source resources that comply with mainland China's laws and regulations, providing developers with a stable, lawful acceleration experience. We are committed to:
-
-- **🌍 Eliminate geographical restrictions**: Help mainland Chinese developers quickly access overseas open source resources
-- **⚖️ Compliance and legality**: Strictly abide by relevant laws and regulations, and only accelerate legal disclosure resources
-- **🚀 Improve efficiency**: Significantly improve developers' work efficiency and development experience
-- **🆓 Inclusive Open Source**: Contribute to the open source community and promote technological exchanges and development
+The technical in-depth analysis article has been posted: ***[A Deep Dive into Xget: A High-Performance, Multi-Protocol, and Secure Acceleration Engine for Developer Resources](https://blog.xi-xu.me/2025/10/07/deep-dive-into-xget-technology-en.html)***.
 
 ## 🎯 Quick Start
 
@@ -1771,12 +1764,7 @@ Supports Jenkins update center and plug-in downloads, and is compatible with the
 
 1. Log in to the Jenkins Management Interface
 2. Enter **Manage Jenkins** → **Plugins** → **Advanced**
-3. In the **Update Site** section, change the URL to:
-
-   ```
-   https://xget.xi-xu.me/jenkins/update-center.json
-   ```
-
+3. In the **Update Site** section, change the URL to `https://xget.xi-xu.me/jenkins/update-center.json`
 4. Click **Submit** to save the configuration
 
 ##### Method 2: Modify the Configuration File
@@ -2355,7 +2343,7 @@ sudo systemctl restart containerd
    wrangler login
    ```
 
-3. **Clone Project**:
+3. **Clone Repository**:
 
    ```bash
    git clone https://github.com/xixu-me/Xget.git

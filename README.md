@@ -44,13 +44,15 @@
 [![AI 推理提供商](https://img.shields.io/badge/AI%20推理提供商-412991?logo=openai&logoColor=white)](#ai-推理提供商)
 [![容器注册表](https://img.shields.io/badge/容器注册表-%23007EC6.svg?logo=docker&logoColor=white)](#容器注册表)
 
-超高性能、安全的一站式开发者资源加速引擎。其性能远超传统加速器，为您提供跨多个平台的统一高效的加速体验，涵盖代码储存库、包管理、AI 推理 API、容器镜像、模型及数据集等。
+超高性能、安全的一站式开发者资源加速引擎，其性能远超传统加速器，提供跨多个平台的统一高效的加速体验，涵盖代码储存库、包管理、AI 推理 API、容器镜像、模型及数据集等。
+
+技术深度解析文章已发布：**[《深入剖析 Xget：一个高性能、多协议、高安全性的开发者资源加速引擎》](https://blog.xi-xu.me/2025/10/07/deep-dive-into-xget-technology.html)**。
 
 ## 💡 存储库初衷
 
-本存储库的初衷是为了加速在中国大陆境内访问不违反相关法律法规的平台上的开源资源，从而为广大开发者提供一个稳定、合法的加速体验。我们致力于：
+本存储库的初衷是为了加速在中国大陆境内访问不违反相关法律法规的平台上的开发者资源，从而为广大开发者提供一个稳定、合法的加速体验。我们致力于：
 
-- **🌍 消除地理限制**：帮助中国大陆开发者快速访问海外开源资源
+- **🌍 消除地理限制**：帮助中国大陆开发者快速访问海外开发者资源
 - **⚖️ 合规合法**：严格遵守相关法律法规，仅加速合法的公开资源
 - **🚀 提升效率**：显著提高开发者的工作效率和开发体验
 - **🆓 普惠开源**：为开源社区贡献力量，促进技术交流与发展
@@ -335,7 +337,7 @@ https://xget.xi-xu.me/conda/community/conda-forge/linux-64/repodata.json
 #### Maven
 
 ```url
-# Maven 中央仓库 JAR 文件原始 URL
+# Maven 中央存储库 JAR 文件原始 URL
 https://repo1.maven.org/maven2/org/springframework/spring-core/5.3.21/spring-core-5.3.21.jar
 
 # 转换后（添加 maven 前缀）
@@ -389,7 +391,7 @@ https://xget.xi-xu.me/gradle/m2/com/github/ben-manes/gradle-versions-plugin/0.51
 #### Homebrew
 
 ```url
-# Homebrew 公式仓库原始 URL
+# Homebrew 公式存储库原始 URL
 https://github.com/Homebrew/homebrew-core/raw/HEAD/Formula/g/git.rb
 
 # 转换后（添加 homebrew 前缀）
@@ -1156,7 +1158,7 @@ repositories {
     }
 }
 
-// 配置插件仓库
+// 配置插件存储库
 pluginManagement {
     repositories {
         maven {
@@ -1771,11 +1773,7 @@ task checkFDroidAvailability {
 
 1. 登录 Jenkins 管理界面
 2. 进入 **Manage Jenkins** → **Plugins** → **Advanced**
-3. 在 **Update Site** 部分，将 URL 更改为：
-
-   ```
-   https://xget.xi-xu.me/jenkins/update-center.json
-   ```
+3. 在 **Update Site** 部分，将 URL 更改为 `https://xget.xi-xu.me/jenkins/update-center.json`
 
 4. 点击 **Submit** 保存配置
 
@@ -2355,7 +2353,7 @@ sudo systemctl restart containerd
    wrangler login
    ```
 
-3. **克隆项目**：
+3. **克隆存储库**：
 
    ```bash
    git clone https://github.com/xixu-me/Xget.git
