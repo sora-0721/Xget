@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { PLATFORMS, transformPath } from '../src/config/platforms.js';
+import { PLATFORMS, transformPath } from '../../src/config/platforms.js';
 
 describe('openSUSE Platform Configuration', () => {
   it('should have openSUSE platform configured', () => {
@@ -40,7 +40,7 @@ describe('openSUSE Platform Configuration', () => {
 
     testCases.forEach(({ input, expected, description }) => {
       const result = transformPath(input, 'opensuse');
-      expect(result).toBe(expected, `Failed for ${description}: ${input}`);
+      expect(result, `Failed for ${description}: ${input}`).toBe(expected);
     });
   });
 

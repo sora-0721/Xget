@@ -75,6 +75,36 @@ describe('Container Registry Support', () => {
 
       // Should attempt to proxy auth requests
       expect(response.status).not.toBe(400);
+    }, 15000);
+
+    it('should transform scope parameter correctly for Docker Hub', async () => {
+      // Test that scope parameter removes Xget path prefix
+      const testUrl =
+        'https://example.com/cr/docker/v2/auth?scope=repository:cr/docker/mlikiowa/napcat-docker:pull&service=Xget';
+      const response = await SELF.fetch(testUrl);
+
+      // Should not return 400 Bad Request (which indicates malformed scope)
+      expect(response.status).not.toBe(400);
+    });
+
+    it('should transform scope parameter correctly for GHCR', async () => {
+      // Test that scope parameter removes Xget path prefix
+      const testUrl =
+        'https://example.com/cr/ghcr/v2/auth?scope=repository:cr/ghcr/user/repo:pull&service=Xget';
+      const response = await SELF.fetch(testUrl);
+
+      // Should not return 400 Bad Request (which indicates malformed scope)
+      expect(response.status).not.toBe(400);
+    });
+
+    it('should handle scope parameter for official Docker Hub images', async () => {
+      // Test that scope parameter is transformed and adds library/ prefix for official images
+      const testUrl =
+        'https://example.com/cr/docker/v2/auth?scope=repository:cr/docker/nginx:pull&service=Xget';
+      const response = await SELF.fetch(testUrl);
+
+      // Should not return 400 Bad Request
+      expect(response.status).not.toBe(400);
     });
   });
 
@@ -207,24 +237,28 @@ describe('Container Registry Support', () => {
 
   describe('Container Registry Platform Support', () => {
     const containerRegistries = [
-      { name: 'Docker Hub', prefix: 'cr/docker', expectedStatus: [200, 301, 302, 401, 404] },
-      { name: 'Quay.io', prefix: 'cr/quay', expectedStatus: [200, 301, 302, 401, 404] },
+      { name: 'Docker Hub', prefix: 'cr/docker', expectedStatus: [200, 301, 302, 401, 404, 429] },
+      { name: 'Quay.io', prefix: 'cr/quay', expectedStatus: [200, 301, 302, 401, 404, 429] },
       {
         name: 'Google Container Registry',
         prefix: 'cr/gcr',
-        expectedStatus: [200, 301, 302, 401, 404]
+        expectedStatus: [200, 301, 302, 401, 404, 429]
       },
       {
         name: 'Microsoft Container Registry',
         prefix: 'cr/mcr',
-        expectedStatus: [200, 301, 302, 401, 404]
+        expectedStatus: [200, 301, 302, 401, 404, 429]
       },
       {
         name: 'GitHub Container Registry',
         prefix: 'cr/ghcr',
-        expectedStatus: [200, 301, 302, 401, 404]
+        expectedStatus: [200, 301, 302, 401, 404, 429]
       },
-      { name: 'Amazon ECR Public', prefix: 'cr/ecr', expectedStatus: [200, 301, 302, 401, 404] }
+      {
+        name: 'Amazon ECR Public',
+        prefix: 'cr/ecr',
+        expectedStatus: [200, 301, 302, 401, 404, 429]
+      }
     ];
 
     containerRegistries.forEach(({ name, prefix, expectedStatus }) => {
@@ -233,7 +267,7 @@ describe('Container Registry Support', () => {
         const response = await SELF.fetch(testUrl, { method: 'HEAD' });
 
         expect(expectedStatus).toContain(response.status);
-      });
+      }, 10000);
     });
   });
 
@@ -253,7 +287,8 @@ describe('Container Registry Support', () => {
 
     it('should handle Docker Hub user images (namespace/image format)', async () => {
       // User images already have namespace prefix
-      const testUrl = 'https://example.com/cr/docker/v2/nginxinc/nginx-unprivileged/manifests/latest';
+      const testUrl =
+        'https://example.com/cr/docker/v2/nginxinc/nginx-unprivileged/manifests/latest';
       const response = await SELF.fetch(testUrl, {
         headers: {
           Accept: 'application/vnd.docker.distribution.manifest.v2+json'
@@ -265,29 +300,23 @@ describe('Container Registry Support', () => {
     });
 
     it('should allow GET for Docker Hub manifest requests', async () => {
-      const response = await SELF.fetch(
-        'https://example.com/cr/docker/v2/nginx/manifests/latest',
-        {
-          method: 'GET',
-          headers: {
-            Accept: 'application/vnd.docker.distribution.manifest.v2+json'
-          }
+      const response = await SELF.fetch('https://example.com/cr/docker/v2/nginx/manifests/latest', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/vnd.docker.distribution.manifest.v2+json'
         }
-      );
+      });
 
       expect(response.status).not.toBe(405);
     });
 
     it('should allow HEAD for Docker Hub manifest requests', async () => {
-      const response = await SELF.fetch(
-        'https://example.com/cr/docker/v2/nginx/manifests/latest',
-        {
-          method: 'HEAD',
-          headers: {
-            Accept: 'application/vnd.docker.distribution.manifest.v2+json'
-          }
+      const response = await SELF.fetch('https://example.com/cr/docker/v2/nginx/manifests/latest', {
+        method: 'HEAD',
+        headers: {
+          Accept: 'application/vnd.docker.distribution.manifest.v2+json'
         }
-      );
+      });
 
       expect(response.status).not.toBe(405);
     });

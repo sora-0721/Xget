@@ -2,7 +2,7 @@ name: Deploy to EdgeOne Pages
 
 on:
   workflow_run:
-    workflows: ["Sync to Pages"]
+    workflows: ["Sync to Pages and Functions"]
     types:
       - completed
     branches:
@@ -20,18 +20,18 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
 
     steps:
       - name: Checkout pages branch
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: pages
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '22.11.0'
+          node-version: "22.11.0"
 
       - name: Deploy to EdgeOne Pages
-        run: npx edgeone pages deploy . -n xget-pages -t ${{ secrets.EDGEONE_API_TOKEN }}
+        run: npx edgeone pages deploy . -n xget6 -t ${{ secrets.EDGEONE_API_TOKEN }}

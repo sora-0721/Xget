@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { PLATFORMS, transformPath } from '../src/config/platforms.js';
+import { PLATFORMS, transformPath } from '../../src/config/platforms.js';
 
 describe('CRAN Platform Configuration', () => {
   it('should have CRAN platform configured', () => {
@@ -37,7 +37,7 @@ describe('CRAN Platform Configuration', () => {
 
     testCases.forEach(({ input, expected, description }) => {
       const result = transformPath(input, 'cran');
-      expect(result).toBe(expected, `Failed for ${description}: ${input}`);
+      expect(result, `Failed for ${description}: ${input}`).toBe(expected);
     });
   });
 

@@ -3,6 +3,12 @@ import { describe, expect, it } from 'vitest';
 // Mock utility functions for testing
 // These would normally be imported from actual utility modules
 
+/**
+ * Check if request is a Git request
+ * @param {Request} request - Request object
+ * @param {URL} url - URL object
+ * @returns {boolean} True if Git request
+ */
 function isGitRequest(request, url) {
   // Check for Git-specific endpoints
   if (url.pathname.endsWith('/info/refs')) {
@@ -34,6 +40,12 @@ function isGitRequest(request, url) {
   return false;
 }
 
+/**
+ * Check if request is a Git LFS request
+ * @param {Request} request - Request object
+ * @param {URL} url - URL object
+ * @returns {boolean} True if Git LFS request
+ */
 function isGitLFSRequest(request, url) {
   // Check for LFS-specific endpoints
   if (url.pathname.includes('/info/lfs')) {
@@ -52,9 +64,11 @@ function isGitLFSRequest(request, url) {
   // Check for LFS-specific headers
   const accept = request.headers.get('Accept') || '';
   const contentType = request.headers.get('Content-Type') || '';
-  
-  if (accept.includes('application/vnd.git-lfs') || 
-      contentType.includes('application/vnd.git-lfs')) {
+
+  if (
+    accept.includes('application/vnd.git-lfs') ||
+    contentType.includes('application/vnd.git-lfs')
+  ) {
     return true;
   }
 
@@ -67,6 +81,12 @@ function isGitLFSRequest(request, url) {
   return false;
 }
 
+/**
+ * Validate request method and path
+ * @param {Request} request - Request object
+ * @param {URL} url - URL object
+ * @returns {{valid: boolean, error?: string, status?: number}} Validation result
+ */
 function validateRequest(request, url) {
   const CONFIG = {
     SECURITY: {
@@ -91,6 +111,11 @@ function validateRequest(request, url) {
   return { valid: true };
 }
 
+/**
+ * Add security headers to response headers
+ * @param {Headers} headers - Response headers
+ * @returns {Headers} Headers with security headers added
+ */
 function addSecurityHeaders(headers) {
   headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
   headers.set('X-Frame-Options', 'DENY');
@@ -184,7 +209,9 @@ describe('Utility Functions', () => {
     });
 
     it('should identify LFS object storage requests by path', () => {
-      const request = new Request('https://example.com/repo.git/objects/a1b2c3d4e5f6789012345678901234567890123456789012345678901234abcd');
+      const request = new Request(
+        'https://example.com/repo.git/objects/a1b2c3d4e5f6789012345678901234567890123456789012345678901234abcd'
+      );
       const url = new URL(request.url);
 
       expect(isGitLFSRequest(request, url)).toBe(true);
@@ -192,7 +219,7 @@ describe('Utility Functions', () => {
 
     it('should identify LFS requests by Accept header', () => {
       const request = new Request('https://example.com/repo.git/objects/batch', {
-        headers: { 'Accept': 'application/vnd.git-lfs+json' }
+        headers: { Accept: 'application/vnd.git-lfs+json' }
       });
       const url = new URL(request.url);
 
@@ -278,7 +305,7 @@ describe('Utility Functions', () => {
     });
 
     it('should reject extremely long paths', () => {
-      const longPath = '/' + 'a'.repeat(3000);
+      const longPath = `/${'a'.repeat(3000)}`;
       const request = new Request(`https://example.com${longPath}`);
       const url = new URL(request.url);
 
