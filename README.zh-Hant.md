@@ -44,6 +44,7 @@
 [![NuGet](https://img.shields.io/badge/NuGet-004880?logo=nuget&logoColor=white)](#nuget-軟體包管理加速)
 [![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)](#rust-軟體包管理加速)
 [![Packagist](https://img.shields.io/badge/Packagist-F28D1A?logo=packagist&logoColor=white)](#php-軟體包管理加速)
+[![Flathub](https://img.shields.io/badge/Flathub-000000?logo=flathub&logoColor=white)](#flathub-儲存庫鏡像)
 [![Debian](https://img.shields.io/badge/Debian-A81D33?logo=debian&logoColor=white)](#debianubuntu-apt-配置)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](#debianubuntu-apt-配置)
 [![Fedora](https://img.shields.io/badge/Fedora-51A2DA?logo=fedora&logoColor=white)](#fedora-dnf-配置)
@@ -66,7 +67,9 @@ Xget 已受邀入駐 [GitCode 平台](https://gitcode.com/xixu-me/xget)，並被
 
 **預部署實例（不保證可靠性）：`xget.xi-xu.me`**
 
-**URL 轉換器：**[**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - 一鍵轉換任意支援平台的 URL 為 Xget 的加速格式！
+**URL 轉換器：**[**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - 一鍵轉換任意支援平台的 URL 為 Xget 的加速格式
+
+**Agent Skills：**[**`skill/xget/`**](skill/xget/) - 可作為獨立的 `/xget` 目錄直接安裝到 skills 目錄中
 
 ## 🌟 核心優勢 - 為什麼選擇 Xget？
 
@@ -249,6 +252,7 @@ classDiagram
 | NuGet | `nuget` | `https://api.nuget.org/...` | `https://xget.xi-xu.me/nuget/...` |
 | Rust Crates | `crates` | `https://crates.io/...` | `https://xget.xi-xu.me/crates/...` |
 | Packagist | `packagist` | `https://repo.packagist.org/...` | `https://xget.xi-xu.me/packagist/...` |
+| Flathub | `flathub` | `https://dl.flathub.org/...` | `https://xget.xi-xu.me/flathub/...` |
 | Debian | `debian` | `https://deb.debian.org/...` | `https://xget.xi-xu.me/debian/...` |
 | Ubuntu | `ubuntu` | `https://archive.ubuntu.com/...` | `https://xget.xi-xu.me/ubuntu/...` |
 | Fedora | `fedora` | `https://dl.fedoraproject.org/...` | `https://xget.xi-xu.me/fedora/...` |
@@ -633,6 +637,22 @@ https://repo.packagist.org/packages/list.json
 
 # 轉換後（新增 packagist 前綴）
 https://xget.xi-xu.me/packagist/packages/list.json
+```
+
+#### Flathub
+
+```url
+# Flathub 儲存庫原始 URL
+https://dl.flathub.org/repo/summary
+
+# 轉換後（新增 flathub 前綴）
+https://xget.xi-xu.me/flathub/repo/summary
+
+# Flathub 應用程式引用原始 URL
+https://dl.flathub.org/repo/appstream/org.gnome.gedit.flatpakref
+
+# 轉換後（新增 flathub 前綴）
+https://xget.xi-xu.me/flathub/repo/appstream/org.gnome.gedit.flatpakref
 ```
 
 #### Linux 發行版
@@ -1662,6 +1682,55 @@ composer config -l
     "guzzlehttp/guzzle": "^7.0"
   }
 }
+```
+
+### Flathub 儲存庫鏡像
+
+#### 配置 Flatpak / Flathub 使用 Xget 鏡像
+
+```bash
+# 透過重寫後的 .flatpakrepo 描述檔新增 Flathub 遠端儲存庫
+flatpak remote-add --if-not-exists flathub \
+  https://xget.xi-xu.me/flathub/repo/flathub.flatpakrepo
+
+# 或者直接新增 OSTree 儲存庫位址
+flatpak remote-add --if-not-exists flathub \
+  https://xget.xi-xu.me/flathub/repo/
+```
+
+#### 支援的 Flathub 服務
+
+```url
+# OSTree 儲存庫中繼資料
+https://xget.xi-xu.me/flathub/repo/summary
+https://xget.xi-xu.me/flathub/repo/summary.sig
+
+# Flatpak 遠端儲存庫描述檔
+https://xget.xi-xu.me/flathub/repo/flathub.flatpakrepo
+
+# 應用程式引用描述檔
+https://xget.xi-xu.me/flathub/repo/appstream/[應用程式 ID].flatpakref
+
+# 儲存庫物件與靜態增量
+https://xget.xi-xu.me/flathub/repo/objects/...
+https://xget.xi-xu.me/flathub/repo/deltas/...
+```
+
+#### 使用範例
+
+```bash
+# 檢視遠端儲存庫內容
+flatpak remote-ls flathub
+
+# 從 Xget 加速的 Flathub 鏡像安裝應用程式
+flatpak install flathub org.gnome.gedit
+
+# 直接透過重寫後的 .flatpakref 安裝
+flatpak install --from \
+  https://xget.xi-xu.me/flathub/repo/appstream/org.gnome.gedit.flatpakref
+
+# 更新已安裝的應用程式與執行時
+flatpak update
 ```
 
 ### Linux 發行版加速
