@@ -3,16 +3,16 @@
  * Copyright (C) 2025 Xi Xu
  *
  * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
+ * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
+ * GNU Affero General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
+ * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
@@ -38,7 +38,7 @@ export function parseAuthenticate(authenticateStr) {
   const serviceMatch = authenticateStr.match(/service="([^"]+)"/);
 
   if (!realmMatch || !serviceMatch) {
-    throw new Error(`invalid Www-Authenticate Header: ${authenticateStr}`);
+    throw new Error(`invalid WWW-Authenticate header: ${authenticateStr}`);
   }
 
   return {
@@ -70,6 +70,41 @@ export async function fetchToken(wwwAuthenticate, scope, authorization) {
     headers.set('Authorization', authorization);
   }
   return await fetch(url, { method: 'GET', headers });
+}
+
+/**
+ * Reads a bearer token from an upstream registry token response.
+ *
+ * Registry token services commonly return either `token` or `access_token`.
+ * Some registries also respond with an empty or malformed body on transient
+ * failures, so this parser fails closed and lets the caller fall back to the
+ * standard 401 challenge flow.
+ * @param {Response} response
+ * @returns {Promise<string | null>} Resolved bearer token, or null when unavailable.
+ */
+export async function readRegistryTokenResponse(response) {
+  const rawBody = await response.text().catch(() => '');
+  if (!rawBody.trim()) {
+    return null;
+  }
+
+  try {
+    const parsed = JSON.parse(rawBody);
+    if (!parsed || typeof parsed !== 'object') {
+      return null;
+    }
+
+    const tokenValue =
+      'token' in parsed && typeof parsed.token === 'string'
+        ? parsed.token
+        : 'access_token' in parsed && typeof parsed.access_token === 'string'
+          ? parsed.access_token
+          : null;
+
+    return tokenValue;
+  } catch {
+    return null;
+  }
 }
 
 /**

@@ -101,7 +101,7 @@ Xget 已受邀入駐
   - `Content-Security-Policy`：嚴格的內容安全策略
   - `Referrer-Policy`：控制參照來源資訊洩露
 - **請求驗證機制**：
-  - HTTP 方法白名單：常規請求限制為 GET/HEAD，Git 操作動態允許 POST
+  - HTTP 方法白名單：常規請求限制為 GET/HEAD，而 Git/LFS、容器映像倉庫、AI 推理與 Hugging Face API 請求會按需允許 `POST`、`PUT`、`PATCH` 和 `DELETE`
   - 路徑長度限制：防止超長 URL 攻擊（最大 2048 字元）
   - 輸入清理：防止路徑遍歷和注入攻擊
 - **逾時保護**：30 秒請求逾時，防止資源耗盡和惡意請求
@@ -1052,18 +1052,34 @@ npm config set registry https://xget.xi-xu.me/npm/
 npm config get registry
 ```
 
-#### 在專案中使用
+#### 配置 Bun 使用 Xget 鏡像
+
+```toml
+# bunfig.toml（專案級）或 ~/.bunfig.toml（全域）
+[install]
+registry = "https://xget.xi-xu.me/npm/"
+```
 
 ```bash
-# 在 .npmrc 檔案中配置專案級鏡像
+# 使用 Bun 安裝依賴項
+bun install
+
+# Bun 也支援 .npmrc，可直接重用既有的 npm 鏡像配置
+echo "registry=https://xget.xi-xu.me/npm/" > .npmrc
+bun install
+```
+
+#### 在專案中使用（npm / Bun）
+
+```bash
+# 在 .npmrc 檔案中配置專案級鏡像（npm / Bun 可重用）
 echo "registry=https://xget.xi-xu.me/npm/" > .npmrc
 
-# 安裝依賴項
+# 使用 npm 安裝依賴項
 npm install
 
-# 或者使用 yarn
-yarn config set registry https://xget.xi-xu.me/npm/
-yarn install
+# 使用 Bun 安裝依賴項
+bun install
 ```
 
 ### Python 軟體包管理加速
@@ -2760,7 +2776,7 @@ export const CONFIG = {
   RETRY_DELAY_MS: 1000, // 重試延遲時間（毫秒）
   CACHE_DURATION: 1800, // 快取持續時間（1800秒 = 30分鐘）
   SECURITY: {
-    ALLOWED_METHODS: ['GET', 'HEAD'], // 允許的 HTTP 方法（Git 操作會動態允許 POST）
+    ALLOWED_METHODS: ['GET', 'HEAD'], // 常規請求的基礎允許清單；協定流量內建了更寬的允許範圍
     ALLOWED_ORIGINS: ['*'], // 允許的 CORS 來源
     MAX_PATH_LENGTH: 2048 // 最大路徑長度（字元）
   }
@@ -2906,7 +2922,7 @@ npx wrangler dev --log-level debug
 
 版權所有 &copy; Xi Xu。
 
-本儲存庫採用 GPL-3.0 許可證 - 檢視 [LICENSE](LICENSE) 檔案了解詳情。
+本儲存庫採用 AGPL-3.0 許可證 - 檢視 [LICENSE](LICENSE) 檔案了解詳情。
 
 ---
 
