@@ -6,6 +6,7 @@
 
 [![Ask Zread](https://img.shields.io/badge/Ask_Zread-_.svg?style=flat&color=00b0aa&labelColor=000000&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff)](https://zread.ai/xixu-me/Xget)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/xixu-me/Xget)
+[![codecov](https://codecov.io/github/xixu-me/xget/graph/badge.svg?token=KDFMG9YX8G)](https://codecov.io/github/xixu-me/xget)
 [![Chromium](https://img.shields.io/badge/Chromium-4285F4?logo=googlechrome&logoColor=white)](#-ecosystem-integration)
 [![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=Firefox&logoColor=white)](#-ecosystem-integration)
 
@@ -58,52 +59,59 @@
 [![Container Registries](https://img.shields.io/badge/Container%20Registries-262261?logo=opencontainersinitiative&logoColor=white)](#container-registries)
 [![AI Inference Providers](https://img.shields.io/badge/AI%20Inference%20Providers-94A3B8?logo=openrouter&logoColor=white)](#ai-inference-providers)
 
-Ultra-high-performance, secure, all-in-one acceleration engine for developer
-resources that significantly outperforms traditional solutions, delivering
-unified, efficient acceleration across code repositories, model and dataset
+An ultra-high-performance, secure, all-in-one acceleration engine for
+developer resources. It significantly outperforms traditional solutions and
+provides unified, efficient acceleration for code hosting, model and dataset
 hubs, package registries, container registries, AI inference providers, and
-more.
+more, while handling caching, retries, security headers, and protocol-specific
+compatibility behavior for you.
 
-In-depth technical analysis article published:
+Technical deep dive:
 **_[Deep Dive into Xget: A High-Performance, Multi-Protocol, and Secure Acceleration Engine for Developer Resources](https://blog.xi-xu.me/en/2025/10/07/Deep-Dive-into-Xget.html)_**.
 
 Xget was invited to join the
 [GitCode platform](https://gitcode.com/xixu-me/xget) and recognized as a G-Star
-graduation project. It has also received spontaneous recommendations from
-several well-known tech creators, including
+graduation project. As "a widely used public project", it is also supported by
+OpenAI's
+[Codex for Open Source](https://developers.openai.com/community/codex-for-oss).
+It has also received spontaneous recommendations from several tech creators,
+including
 [Ruan Yifeng](https://www.ruanyifeng.com/blog/2025/12/weekly-issue-379.html#:~:text=Xget),
 [GitHubDaily](https://x.com/i/status/1956204203937829256),
 [FishC](https://www.bilibili.com/video/BV1EeeBzVEop/), and
-[Xuanli 199](https://www.bilibili.com/video/BV197hqzsE8Y/?t=8). Sincere thanks
-to GitCode and every creator, reader, and user who helped more people discover
-Xget.
+[Xuanli 199](https://www.bilibili.com/video/BV197hqzsE8Y/?t=8). Thanks to every
+individual, team, and community that supports, shares, recommends, or actively
+uses Xget.
 
 ## 🎯 Quick Start
 
-**Pre-deployed Instance (no reliability guarantee): `xget.xi-xu.me`**
+**Pre-deployed Instance: `xget.xi-xu.me`** - For evaluation and trial only,
+deploy your own instance for production or availability-sensitive workloads
+
+> [!WARNING]
+> If you self-host it, put it behind authentication, IP allowlists,
+> or both unless you explicitly intend to run a public mirror.
 
 **URL Converter:** [**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - Convert any
 supported platform URL to Xget's acceleration format with one click
 
-**Agent Skills:** [**`skills/xget/`**](skills/xget/) - Designed to work as a
-standalone `/xget` directory in a skills installation
+**Agent Skills: `npx skills add xixu-me/skills -s xget`**
 
 ## 🌟 Core Advantages - Why Choose Xget?
 
-### ⚡ Extreme Performance - Breaking Through Traditional Accelerator Bottlenecks
+### ⚡ Performance-Oriented Design
 
-- **⚡ Millisecond Response**: Cloudflare's global 330+ edge nodes, average
-  response time < 50ms
-- **🌐 HTTP/3 Ultra-Fast Protocol**: Latest HTTP/3 protocol enabled, 40%
-  reduction in connection latency, 30% increase in transmission speed
-- **📦 Intelligent Multi-Compression**: Triple compression algorithms (gzip,
-  deflate, brotli), 60% improvement in transmission efficiency
-- **🔗 Zero-Latency Pre-Connection**: Connection warm-up and keep-alive,
-  eliminating handshake overhead for second-level responses
-- **⚡ Parallel Chunked Download**: Full support for HTTP Range requests,
-  multiplied multi-threaded download speeds
-- **🎯 Smart Routing Optimization**: Automatically selects optimal transmission
-  paths, avoiding network congestion nodes
+- **🌐 Global Edge Runtime**: Built on Cloudflare Workers and designed to run
+  close to users and upstream services
+- **⚡ Protocol-Aware Handling**: Supports HTTP/3, range requests, Git traffic,
+  container registry flows, and AI inference APIs
+- **📦 Cache and Retry Pipeline**: Includes edge caching for compatible
+  responses, retry logic for transient upstream failures, and request
+  normalization for supported platforms
+- **🔗 Connection Reuse**: Uses standard HTTP connection reuse and keep-alive
+  behavior where the runtime and upstream allow it
+- **📊 Request Timing Visibility**: Can expose timing data through
+  `X-Performance-Metrics` headers where protocol compatibility allows
 
 ### 🌐 Deep Multi-Platform Integration
 
@@ -120,13 +128,15 @@ standalone `/xget` directory in a skills installation
   - `Strict-Transport-Security`: Enforces HTTPS transmission, prevents
     man-in-the-middle attacks
   - `X-Frame-Options: DENY`: Prevents clickjacking attacks
-  - `X-XSS-Protection`: Built-in XSS protection mechanism
   - `Content-Security-Policy`: Strict content security policy
   - `Referrer-Policy`: Controls referrer information leakage
+  - `Permissions-Policy`: Restricts privacy-sensitive browser features by
+    default
+  - `X-XSS-Protection`: Legacy compatibility header for older browsers
 - **Request Validation Mechanism**:
-  - HTTP method whitelist: Regular requests limited to GET/HEAD, while
-    Git/LFS, container registry, AI inference, and Hugging Face API traffic
-    allow `POST`, `PUT`, `PATCH`, and `DELETE` as needed
+  - HTTP method whitelist: Regular requests limited to GET/HEAD, while Git/LFS,
+    container registry, AI inference, and Hugging Face API traffic allow `POST`,
+    `PUT`, `PATCH`, and `DELETE` as needed
   - Path length limit: Prevents excessively long URL attacks (max 2048
     characters)
   - Input sanitization: Prevents path traversal and injection attacks
@@ -222,11 +232,17 @@ graph TD
 ```mermaid
 classDiagram
     class Worker {
-        +handleRequest(request)
+        +fetch(request)
     }
-    class Config {
-        +PLATFORMS
+    class AppHandler {
+        +handleRequest(request, env, ctx)
+    }
+    class PlatformCatalog {
+        +PLATFORM_CATALOG
+    }
+    class PlatformRouting {
         +transformPath()
+        +resolveTarget()
     }
     class Validation {
         +validateRequest()
@@ -243,6 +259,13 @@ classDiagram
     class AIProtocol {
         +configureAIHeaders()
     }
+    class UpstreamPipeline {
+        +tryReadCachedResponse()
+        +fetchUpstreamResponse()
+    }
+    class ResponsePipeline {
+        +finalizeResponse()
+    }
     class Security {
         +addSecurityHeaders()
     }
@@ -250,13 +273,18 @@ classDiagram
         +monitor()
     }
 
-    Worker --> Config
-    Worker --> Validation
-    Worker --> GitProtocol
-    Worker --> DockerProtocol
-    Worker --> AIProtocol
-    Worker --> Security
-    Worker --> Performance
+    Worker --> AppHandler
+    AppHandler --> PlatformCatalog
+    AppHandler --> PlatformRouting
+    AppHandler --> Validation
+    AppHandler --> GitProtocol
+    AppHandler --> DockerProtocol
+    AppHandler --> AIProtocol
+    AppHandler --> UpstreamPipeline
+    AppHandler --> ResponsePipeline
+    AppHandler --> Security
+    AppHandler --> Performance
+    PlatformRouting --> PlatformCatalog
 ```
 
 ## 📖 URL Conversion Rules
@@ -2878,17 +2906,19 @@ export const CONFIG = {
 
 ### Adding New Platforms
 
-To add support for new platforms, edit `src/config/platforms.js`:
+To add support for new platforms, update the platform catalog and, if needed,
+the path transformers:
 
 ```javascript
-export const PLATFORMS = {
+// src/config/platform-catalog.js
+export const PLATFORM_CATALOG = {
   // Existing platforms...
+  custom: 'https://example.com'
+};
 
-  // New platform example
-  custom: {
-    base: 'https://example.com',
-    transform: path => path.replace(/^\/custom\//, '/')
-  }
+// src/routing/platform-transformers.js
+const PLATFORM_PATH_TRANSFORMERS = {
+  custom: path => path.replace(/^\/custom\//, '/')
 };
 ```
 
@@ -3035,6 +3065,12 @@ We welcome all forms of contribution! Please check the
 [Contributing Guide](CONTRIBUTING.md) to learn how to participate in repository
 development.
 
+Community and maintainer expectations are documented in:
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Governance](GOVERNANCE.md)
+
 1. **Report Issues**: Use
    [issue templates](https://github.com/xixu-me/Xget/issues/new/choose) to
    report bugs or propose feature requests
@@ -3058,7 +3094,7 @@ development.
 Copyright &copy; Xi Xu.
 
 This repository is licensed under the AGPL-3.0 License - see the
-[LICENSE](LICENSE) file for details.
+[`LICENSE`](LICENSE) file for details.
 
 ---
 

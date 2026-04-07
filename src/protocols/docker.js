@@ -1,6 +1,6 @@
 /**
  * Xget - High-performance acceleration engine for developer resources
- * Copyright (C) 2025 Xi Xu
+ * Copyright (C) Xi Xu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -20,7 +20,7 @@
  * Docker/OCI Registry protocol handler for Xget
  */
 
-import { SORTED_PLATFORMS } from '../config/platforms.js';
+import { SORTED_PLATFORMS } from '../routing/platform-index.js';
 import { createErrorResponse } from '../utils/security.js';
 
 /**

@@ -6,6 +6,7 @@
 
 [![Ask Zread](https://img.shields.io/badge/Ask_Zread-_.svg?style=flat&color=00b0aa&labelColor=000000&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff)](https://zread.ai/xixu-me/Xget)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/xixu-me/Xget)
+[![codecov](https://codecov.io/github/xixu-me/xget/graph/badge.svg?token=KDFMG9YX8G)](https://codecov.io/github/xixu-me/xget)
 [![Chromium](https://img.shields.io/badge/Chromium-4285F4?logo=googlechrome&logoColor=white)](#-生态系统集成)
 [![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=Firefox&logoColor=white)](#-生态系统集成)
 
@@ -57,34 +58,38 @@
 [![容器注册表](https://img.shields.io/badge/容器注册表-262261?logo=opencontainersinitiative&logoColor=white)](#容器注册表)
 [![AI 推理提供商](https://img.shields.io/badge/AI%20推理提供商-94A3B8?logo=openrouter&logoColor=white)](#ai-推理提供商)
 
-面向开发者资源的超高性能、安全、一体化加速引擎，其性能显著优于传统解决方案，为代码存储库、模型和数据集中心、软件包注册表、容器注册表、AI 推理提供商等提供统一、高效的加速。
+面向开发者资源的超高性能、安全、一体化加速引擎，其性能显著优于传统解决方案，为代码托管、模型和数据集中心、包管理存储库、容器注册表、AI 推理提供商等提供统一、高效的加速，同时替你处理缓存、重试、安全响应头以及协议相关兼容行为。
 
-技术深度解析文章已发布：**[《深入剖析 Xget：一个高性能、多协议、高安全性的开发者资源加速引擎》](https://blog.xi-xu.me/en/2025/10/07/Deep-Dive-into-Xget.html)**。
+技术深度解析文章：**[《深入剖析 Xget：一个高性能、多协议、高安全性的开发者资源加速引擎》](https://blog.xi-xu.me/en/2025/10/07/Deep-Dive-into-Xget.html)**。
 
 Xget 已受邀入驻
-[GitCode 平台](https://gitcode.com/xixu-me/xget)，并被认证为 G-Star 毕业项目；同时也获得多位技术博主自发推荐，包括[阮一峰](https://www.ruanyifeng.com/blog/2025/12/weekly-issue-379.html#:~:text=Xget)、[GitHubDaily](https://x.com/i/status/1956204203937829256)、[鱼 C](https://www.bilibili.com/video/BV1EeeBzVEop/)、[玄离 199](https://www.bilibili.com/video/BV197hqzsE8Y/?t=8)
-等。在此感谢 GitCode 的认可，也感谢每一位分享、推荐和实际使用 Xget 的朋友。
+[GitCode 平台](https://gitcode.com/xixu-me/xget)，并被认证为 G-Star 毕业项目。作为“一个被广泛使用的公共项目”，Xget 也获得了 OpenAI
+[Codex for Open Source](https://developers.openai.com/community/codex-for-oss)
+项目的支持。同时，它也获得多位技术博主自发推荐，包括[阮一峰](https://www.ruanyifeng.com/blog/2025/12/weekly-issue-379.html#:~:text=Xget)、[GitHubDaily](https://x.com/i/status/1956204203937829256)、[鱼 C](https://www.bilibili.com/video/BV1EeeBzVEop/)、[玄离 199](https://www.bilibili.com/video/BV197hqzsE8Y/?t=8)
+等。感谢所有支持、分享、推荐和实际使用 Xget 的个人、团队与社区。
 
 ## 🎯 快速使用
 
-**预部署实例（不保证可靠性）：`xget.xi-xu.me`**
+**预部署实例：`xget.xi-xu.me`** - 仅适合评估和试用，生产环境或对可用性敏感的场景建议自部署
+
+> [!WARNING]
+> 如果你选择自托管，除非你明确要做公开镜像，否则请至少加上鉴权、IP 白名单，或同时启用两者。
 
 **URL 转换器：**[**`xuc.xi-xu.me`**](https://xuc.xi-xu.me) - 一键转换任意支持平台的 URL 为 Xget 的加速格式
 
-**Agent Skills：**[**`skills/xget/`**](skills/xget/) - 可以作为独立的 `/xget`
-目录直接安装到 skills 目录中
+**Agent Skills：`npx skills add xixu-me/skills -s xget`**
 
 ## 🌟 核心优势 - 为什么选择 Xget？
 
-### ⚡ 极速性能 - 突破传统加速器瓶颈
+### ⚡ 面向性能的设计
 
-- **⚡ 毫秒级响应**：Cloudflare 全球 330+ 边缘节点，平均响应时间 < 50ms
-- **🌐
-  HTTP/3 极速协议**：启用最新 HTTP/3 协议，连接延迟降低 40%，传输速度提升 30%
-- **📦 智能多重压缩**：gzip、deflate、brotli 三重压缩算法，传输效率提升 60%
-- **🔗 零延迟预连接**：连接预热和保持活跃，消除握手开销，实现秒级响应
-- **⚡ 并行分片下载**：完整支持 HTTP Range 请求，多线程下载速度倍增
-- **🎯 智能路由优化**：自动选择最优传输路径，避开网络拥堵节点
+- **🌐 全球边缘运行时**：基于 Cloudflare Workers，尽量让请求更靠近用户和上游服务
+- **⚡ 协议感知处理**：支持 HTTP/3、Range 请求、Git 流量、容器注册表流程和 AI 推理 API
+- **📦 缓存与重试链路**：对可兼容响应提供边缘缓存，对临时性上游失败提供重试，并对支持的平台做请求规范化
+- **🔗 连接复用**：在运行时和上游允许的前提下，复用标准 HTTP
+  keep-alive 与连接复用能力
+- **📊 请求耗时可观测**：在协议兼容的情况下，可通过 `X-Performance-Metrics`
+  响应头暴露阶段性耗时信息
 
 ### 🌐 多平台深度集成
 
@@ -97,11 +102,13 @@ Xget 已受邀入驻
 - **多层安全标头**：
   - `Strict-Transport-Security`：强制 HTTPS 传输，预防中间人攻击
   - `X-Frame-Options: DENY`：防止点击劫持攻击
-  - `X-XSS-Protection`：内置 XSS 防护机制
   - `Content-Security-Policy`：严格的内容安全策略
   - `Referrer-Policy`：控制引用信息泄露
+  - `Permissions-Policy`：默认限制浏览器中的隐私敏感能力
+  - `X-XSS-Protection`：面向旧浏览器的兼容性响应头
 - **请求验证机制**：
-  - HTTP 方法白名单：常规请求限制为 GET/HEAD，而 Git/LFS、容器镜像仓库、AI 推理和 Hugging Face API 请求会按需允许 `POST`、`PUT`、`PATCH` 和 `DELETE`
+  - HTTP 方法白名单：常规请求限制为 GET/HEAD，而 Git/LFS、容器镜像存储库、AI 推理和 Hugging
+    Face API 请求会按需允许 `POST`、`PUT`、`PATCH` 和 `DELETE`
   - 路径长度限制：防止超长 URL 攻击（最大 2048 字符）
   - 输入清理：防止路径遍历和注入攻击
 - **超时保护**：30 秒请求超时，防止资源耗尽和恶意请求
@@ -188,11 +195,17 @@ graph TD
 ```mermaid
 classDiagram
     class Worker {
-        +handleRequest(request)
+        +fetch(request)
     }
-    class Config {
-        +PLATFORMS
+    class AppHandler {
+        +handleRequest(request, env, ctx)
+    }
+    class PlatformCatalog {
+        +PLATFORM_CATALOG
+    }
+    class PlatformRouting {
         +transformPath()
+        +resolveTarget()
     }
     class Validation {
         +validateRequest()
@@ -209,6 +222,13 @@ classDiagram
     class AIProtocol {
         +configureAIHeaders()
     }
+    class UpstreamPipeline {
+        +tryReadCachedResponse()
+        +fetchUpstreamResponse()
+    }
+    class ResponsePipeline {
+        +finalizeResponse()
+    }
     class Security {
         +addSecurityHeaders()
     }
@@ -216,13 +236,18 @@ classDiagram
         +monitor()
     }
 
-    Worker --> Config
-    Worker --> Validation
-    Worker --> GitProtocol
-    Worker --> DockerProtocol
-    Worker --> AIProtocol
-    Worker --> Security
-    Worker --> Performance
+    Worker --> AppHandler
+    AppHandler --> PlatformCatalog
+    AppHandler --> PlatformRouting
+    AppHandler --> Validation
+    AppHandler --> GitProtocol
+    AppHandler --> DockerProtocol
+    AppHandler --> AIProtocol
+    AppHandler --> UpstreamPipeline
+    AppHandler --> ResponsePipeline
+    AppHandler --> Security
+    AppHandler --> Performance
+    PlatformRouting --> PlatformCatalog
 ```
 
 ## 📖 URL 转换规则
@@ -1716,7 +1741,7 @@ composer config -l
 flatpak remote-add --if-not-exists flathub \
   https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# 然后把现有 Flathub 远程仓库改写到 Xget 镜像
+# 然后把现有 Flathub 远程存储库改写到 Xget 镜像
 flatpak remote-modify flathub \
   --url=https://xget.xi-xu.me/flathub/repo/
 
@@ -1725,11 +1750,11 @@ flatpak remote-modify flathub \
   --url=https://dl.flathub.org/repo/
 ```
 
-Xget 镜像的是 Flathub 的 OSTree 仓库端点。根据当前 Flatpak 客户端的实际行为，直接导入镜像
+Xget 镜像的是 Flathub 的 OSTree 存储库端点。根据当前 Flatpak 客户端的实际行为，直接导入镜像
 `.flatpakrepo`
-描述文件，或者直接添加镜像仓库 URL，仍然可能回退到上游 Flathub 地址，或者因为未导入签名密钥而失败，因此更可靠的做法是先添加官方 Flathub，再通过
+描述文件，或者直接添加镜像存储库 URL，仍然可能回退到上游 Flathub 地址，或者因为未导入签名密钥而失败，因此更可靠的做法是先添加官方 Flathub，再通过
 `flatpak remote-modify ... --url=...`
-改写远程地址。若你使用系统级远程仓库，请在相同命令前加上 `sudo`。
+改写远程地址。若你使用系统级远程存储库，请在相同命令前加上 `sudo`。
 
 #### 支持的 Flathub 服务
 
@@ -1741,7 +1766,7 @@ https://xget.xi-xu.me/flathub/repo/summary.sig
 https://xget.xi-xu.me/flathub/repo/summary.idx
 https://xget.xi-xu.me/flathub/repo/summaries/...
 
-# Flatpak 远程仓库描述文件
+# Flatpak 远程存储库描述文件
 https://xget.xi-xu.me/flathub/repo/flathub.flatpakrepo
 
 # 应用引用描述文件
@@ -1756,13 +1781,13 @@ https://xget.xi-xu.me/flathub/repo/delta-indexes/...
 #### 使用示例
 
 ```bash
-# 确认保存下来的远程仓库 URL 已经指向 Xget
+# 确认保存下来的远程存储库 URL 已经指向 Xget
 flatpak remotes --show-details
 
-# 查看远程仓库内容
+# 查看远程存储库内容
 flatpak remote-ls flathub
 
-# 在改写 Flathub 远程仓库后安装应用
+# 在改写 Flathub 远程存储库后安装应用
 flatpak install flathub org.gnome.gedit
 
 # 直接通过重写后的 .flatpakref 安装
@@ -2792,17 +2817,18 @@ export const CONFIG = {
 
 ### 添加新平台
 
-要添加对新平台的支持，编辑 `src/config/platforms.js`：
+要添加对新平台的支持，请更新平台目录；如果需要特殊路径转换，再补充转换器：
 
 ```javascript
-export const PLATFORMS = {
+// src/config/platform-catalog.js
+export const PLATFORM_CATALOG = {
   // 现有平台...
+  custom: 'https://example.com'
+};
 
-  // 新平台示例
-  custom: {
-    base: 'https://example.com',
-    transform: path => path.replace(/^\/custom\//, '/')
-  }
+// src/routing/platform-transformers.js
+const PLATFORM_PATH_TRANSFORMERS = {
+  custom: path => path.replace(/^\/custom\//, '/')
 };
 ```
 
@@ -2903,6 +2929,12 @@ npx wrangler dev --log-level debug
 
 我们欢迎各种形式的贡献！请查看[贡献指南](CONTRIBUTING.md)了解如何参与存储库开发。
 
+社区协作与维护者职责说明请参考：
+
+- [行为准则](CODE_OF_CONDUCT.md)
+- [安全策略](SECURITY.md)
+- [治理说明](GOVERNANCE.md)
+
 1. **报告问题**: 使用
    [issue 模板](https://github.com/xixu-me/Xget/issues/new/choose)报告 bug 或提出功能请求
 2. **提交代码**: fork 存储库，创建功能分支，提交 pull request
@@ -2923,7 +2955,7 @@ npx wrangler dev --log-level debug
 
 版权所有 &copy; Xi Xu。
 
-本存储库采用 AGPL-3.0 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+本存储库采用 AGPL-3.0 许可证 - 查看 [`LICENSE`](LICENSE) 文件了解详情。
 
 ---
 

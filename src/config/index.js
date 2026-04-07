@@ -1,6 +1,6 @@
 /**
  * Xget - High-performance acceleration engine for developer resources
- * Copyright (C) 2025 Xi Xu
+ * Copyright (C) Xi Xu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,7 +16,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { PLATFORMS } from './platforms.js';
+import { PLATFORMS } from './platform-catalog.js';
 
 /**
  * Security-related configuration options for request validation and CORS.
