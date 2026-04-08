@@ -22,6 +22,9 @@
 
 </div>
 
+> [!TIP]
+> 歡迎加入「Xget 開源與 AI 交流群」，一起交流開源專案、AI 應用、工程實踐、效率工具和獨立開發；如果你也在做產品、寫程式、折騰專案或者對開源和 AI 感興趣，歡迎[**進群**](https://file.xi-xu.me/QR%20Codes/%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png)認識更多認真做事、樂於分享的朋友。
+
 [![GitHub](https://img.shields.io/badge/GitHub-181717?&logo=github&logoColor=white)](#github)
 [![GitLab](https://img.shields.io/badge/GitLab-FC6D26?&logo=gitlab&logoColor=white)](#gitlab)
 [![Gitea](https://img.shields.io/badge/Gitea-609926?&logo=gitea&logoColor=white)](#gitea)
