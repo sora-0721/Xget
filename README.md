@@ -26,29 +26,20 @@
 > [!TIP]
 > 欢迎加入“Xget 开源与 AI 交流群”，一起交流开源项目、AI 应用、工程实践、效率工具和独立开发；如果你也在做产品、写代码、折腾项目或者对开源和 AI 感兴趣，欢迎[**进群**](https://file.xi-xu.me/QR%20Codes/%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png)认识更多认真做事、乐于分享的朋友。
 
-The ultra-high-performance, secure, all-in-one acceleration engine for
-developer resources. It provides unified acceleration for code hosting, model
+An ultra-high-performance, secure, all-in-one acceleration engine for developer
+resources. It provides unified, efficient acceleration for code hosting, model
 and dataset hubs, package registries, container registries, AI inference
 providers, and more, while handling caching, retries, security headers, and
 protocol-specific compatibility behavior for you.
 
-- Built on Cloudflare Workers for edge execution and protocol-aware request
-  handling.
-- Designed for real developer workflows across Git, package managers,
-  containers, and AI APIs.
-- Flexible enough to evaluate on the public instance or self-host for
-  production.
-
 Technical deep dive:
 **_[Deep Dive into Xget: A High-Performance, Multi-Protocol, and Secure Acceleration Engine for Developer Resources](https://blog.xi-xu.me/en/2025/10/07/Deep-Dive-into-Xget.html)_**.
 
-Xget was invited to join the
-[GitCode platform](https://gitcode.com/xixu-me/xget) and recognized as a G-Star
-graduation project. As "a widely used public project", it is also supported by
-OpenAI's
-[Codex for Open Source](https://developers.openai.com/community/codex-for-oss).
-It has also received spontaneous recommendations from several tech creators,
-including
+Xget was invited onto [GitCode](https://gitcode.com/xixu-me/xget) and
+recognized as a G-Star graduation project. As "a widely used public project",
+it receives support from OpenAI's
+[Codex for Open Source](https://developers.openai.com/community/codex-for-oss)
+and has also been spontaneously recommended by several tech creators, including
 [Ruan Yifeng](https://www.ruanyifeng.com/blog/2025/12/weekly-issue-379.html#:~:text=Xget),
 [GitHubDaily](https://x.com/i/status/1956204203937829256),
 [FishC](https://www.bilibili.com/video/BV1EeeBzVEop/), and
